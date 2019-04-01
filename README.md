@@ -1,2 +1,1 @@
-# mycode
-learning to track my code
+Learning Python and Github
