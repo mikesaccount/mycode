@@ -5,11 +5,13 @@
   tasks:
   - archive:
       path: /tmp/file1.txt
-      dest: /tmp/file1.txt.gz
+      dest: /tmp/{{ ansible_date_time.date }}file1.txt.gz
       format: gz
+  - debug:
+      var: inventory_hostname
       
   - fetch:
-      src: /tmp/file1.txt
-      dest: /home/student/ansible/backup/
+      src: /tmp/{{ ansible_date_time.date }}file1.txt.gz 
+      dest: /home/student/mycode/ansible/backup/
       
 
